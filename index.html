@@ -240,46 +240,69 @@ el.classList.add("active")
 window.addEventListener("scroll",reveal)
 
 
-/* Counter animation */
+/* COUNTER WHEN SCROLL */
 
-const counters = document.querySelectorAll('.counter');
+const counters = document.querySelectorAll(".counter");
 
-counters.forEach(counter => {
+const startCounter = (counter) => {
 
     const update = () => {
 
-        const target = +counter.getAttribute('data-target');
+        const target = +counter.getAttribute("data-target");
         const count = +counter.innerText;
 
-        const inc = target / 100;
+        const increment = target / 100;
 
-        if(count < target){
-            counter.innerText = Math.ceil(count + inc);
+        if (count < target) {
+
+            counter.innerText = Math.ceil(count + increment);
             setTimeout(update,20);
-        }else{
 
-    let value = target;
+        } else {
 
-    if(target >= 1000){
-        value = (target/1000) + "K";
-    }
+            let value = target;
 
-    if(target === 10){
-        value = "10+";
-    }
+            if(target >= 1000){
+                value = (target/1000) + "K";
+            }
 
-    if(target === 50000){
-        value = "50K+";
-    }
+            if(target === 10){
+                value = "10+";
+            }
 
-    counter.innerText = value;
+            if(target === 50000){
+                value = "50K+";
+            }
 
-}
+            counter.innerText = value;
+
+        }
 
     };
 
     update();
 
+};
+
+
+const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            startCounter(entry.target);
+            observer.unobserve(entry.target);
+
+        }
+
+    });
+
+});
+
+
+counters.forEach(counter => {
+    observer.observe(counter);
 });
 </script>
 
