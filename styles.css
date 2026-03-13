@@ -231,6 +231,42 @@ font-size:18px;
 /*.hero span{color:#d4af37;font-style:italic}*/
 
 .hero p{color:#ccc;margin-bottom:30px}
+
+.hero-line{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+height:2px;
+
+background:linear-gradient(
+90deg,
+transparent 0%,
+#d4af37 40%,
+#fff3b0 50%,
+#d4af37 60%,
+transparent 100%
+);
+
+background-size:200% 100%;
+
+animation:goldLine 3s linear infinite;
+
+box-shadow:
+0 0 8px rgba(212,175,55,0.8),
+0 0 16px rgba(212,175,55,0.4);
+}
+@keyframes goldLine{
+
+0%{
+background-position:-200% 0;
+}
+
+100%{
+background-position:200% 0;
+}
+
+}
 /* SECTIONS */
 
 section{
