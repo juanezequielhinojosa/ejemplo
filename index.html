@@ -98,7 +98,7 @@
 
 <div class="card">
     <div class="number">02</div>
-    <div class="icon"><i class="fa-solid fa-user"></i></div>
+    <div class="icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
     <h3>Barba Completa</h3>
     <p>Afeitado clásico y perfilado premium.</p>
 </div>
@@ -118,49 +118,29 @@
 </div>
     
     <div class="card">
-        <div class="number">01</div>
-        <h3>Corte de Cabello</h3>
-        <p>Técnicas modernas y clásicas.</p>
-    </div>
-
-    <div class="card">
-        <div class="number">02</div>
-        <h3>Barba Completa</h3>
-        <p>Afeitado clásico y perfilado premium.</p>
-    </div>
-
-    <div class="card">
-        <div class="number">03</div>
-        <h3>Experiencia BACAN</h3>
-        <p>Servicio completo con bebida incluida.</p>
-    </div>
-
-    <div class="card">
-        <div class="number">04</div>
-        <h3>Perfilado de Cejas</h3>
-        <p>Definición precisa para una mirada más limpia.</p>
-    </div>
-
-    <div class="card">
         <div class="number">05</div>
+        <div class="icon"><i class="fa-solid fa-pump-soap"></i></div>
         <h3>Lavado Capilar</h3>
         <p>Limpieza profunda con productos profesionales.</p>
     </div>
 
     <div class="card">
         <div class="number">06</div>
+        <div class="icon"><i class="fa-solid fa-star"></i></div>
         <h3>Corte + Barba</h3>
         <p>Combo completo para un look impecable.</p>
     </div>
 
     <div class="card">
         <div class="number">07</div>
+        <div class="icon"><i class="fa-solid fa-droplet"></i></div>
         <h3>Tratamiento Capilar</h3>
         <p>Hidratación y cuidado para un cabello saludable.</p>
     </div>
 
     <div class="card">
         <div class="number">08</div>
+        <div class="icon"><i class="fa-solid fa-user-tie"></i></div>
         <h3>Diseño de Barba</h3>
         <p>Estilo personalizado según tu rostro.</p>
     </div>
@@ -282,9 +262,28 @@ src="https://maps.google.com/maps?q=buenos%20aires&t=&z=13&ie=UTF8&iwloc=&output
 
 function toggleMenu(){
 
-document.getElementById("menu").classList.toggle("active")
+const menu = document.getElementById("menu")
+const btn = document.querySelector(".hamburger")
+
+menu.classList.toggle("active")
+
+if(menu.classList.contains("active")){
+btn.innerHTML = "✕"
+}else{
+btn.innerHTML = "☰"
+}
 
 }
+const menuLinks = document.querySelectorAll("#menu a")
+
+menuLinks.forEach(link=>{
+link.addEventListener("click", ()=>{
+
+document.getElementById("menu").classList.remove("active")
+document.querySelector(".hamburger").innerHTML = "☰"
+
+})
+})
 
 /* SCROLL ANIMATION */
 
