@@ -58,8 +58,29 @@
     </div>
 </section>
 
+<div class="metrics gridinfo">
 
+    <div class="metric">
+        <h2 class="counter" data-target="10">0</h2>
+        <p>AÑOS DE EXPERIENCIA</p>
+    </div>
 
+    <div class="metric">
+        <h2 class="counter" data-target="50000">0</h2>
+        <p>CLIENTES FELICES</p>
+    </div>
+
+    <div class="metric">
+        <h2 class="counter" data-target="15">0</h2>
+        <p>SUCURSALES</p>
+    </div>
+
+    <div class="metric">
+        <h2 class="counter" data-target="22000">0</h2>
+        <p>SEGUIDORES</p>
+    </div>
+
+</div>
 
 <section id="servicios" class="reveal">
 
@@ -218,6 +239,48 @@ el.classList.add("active")
 
 window.addEventListener("scroll",reveal)
 
+
+/* Counter animation */
+
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+
+    const update = () => {
+
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+
+        const inc = target / 100;
+
+        if(count < target){
+            counter.innerText = Math.ceil(count + inc);
+            setTimeout(update,20);
+        }else{
+
+    let value = target;
+
+    if(target >= 1000){
+        value = (target/1000) + "K";
+    }
+
+    if(target === 10){
+        value = "10+";
+    }
+
+    if(target === 50000){
+        value = "50K+";
+    }
+
+    counter.innerText = value;
+
+}
+
+    };
+
+    update();
+
+});
 </script>
 
 </body>
