@@ -32,7 +32,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 6%;
+  padding: 18px 4%;
 }
 
 .logo {
@@ -91,11 +91,11 @@ nav a:hover::after {
   /*background-color: #111;*/
   position: relative;
 }
-.hero h1 {
+/*.hero h1 {
   font-family: "Playfair Display", serif;
   font-size: 65px;
   margin: 20px 0;
-}
+}*/
 
 /*.hero h1{
 font-family:'Playfair Display',serif;
@@ -134,16 +134,16 @@ background-position:200%;
 
 }*/
 
-/*.hero h1{
+.hero h1{
 animation:glowText 3s infinite;
 font-family:'Playfair Display',serif;
 font-size:70px;
 margin:20px 0;
 color:#d4af37;
 position:relative;
-}*/
+}
 
-/*@keyframes glowText{
+@keyframes glowText{
 
 0%{
 text-shadow:none;
@@ -151,8 +151,12 @@ text-shadow:none;
 
 50%{
 text-shadow:
-0 0 10px #d4af37,
+/*0 0 10px #d4af37,
 0 0 20px #d4af37,
+0 0 40px #d4af37;*/
+
+0 0 10px #1b1605,
+0 0 20px #574407,
 0 0 40px #d4af37;
 }
 
@@ -160,7 +164,7 @@ text-shadow:
 text-shadow:none;
 }
 
-}*/
+}
 
 /*.hero h1{
 animation:goldGlow 4s infinite;
@@ -283,7 +287,8 @@ margin-bottom:50px;
 /* SECTIONS */
 
 section {
-  padding: 120px 8%;
+  padding: 80px 8%;
+  
 }
 
 .section-title {
@@ -803,7 +808,7 @@ margin-top:40px;
     font-size: 36px;
   }
   .section-title h2 {
-    font-size: 36px;
+    font-size: 30px;
   }
   .about {
     grid-template-columns: 1fr;
