@@ -306,7 +306,7 @@ section {
 
 .section-title h2 {
   font-family: "Playfair Display", serif;
-  font-size: 50px;
+  font-size: 35px;
   margin-top: 20px;
 }
 /* SERVICES */
@@ -802,7 +802,9 @@ margin-top:40px;
   .hero h1 {
     font-size: 36px;
   }
-
+  .section-title h2 {
+    font-size: 36px;
+  }
   .about {
     grid-template-columns: 1fr;
   }

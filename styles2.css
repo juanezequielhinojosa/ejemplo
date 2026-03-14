@@ -94,8 +94,294 @@ nav a:hover::after {
   gap: 25px;
 }
 
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url("img/hero.jpg") center/cover fixed;
+  /*background-color: #a85252;*/
+  position: relative;
+}
+/*.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 65px;
+  margin: 20px 0;
+}*/
+
+/*.hero h1{
+font-family:'Playfair Display',serif;
+font-size:70px;
+margin:20px 0;
+color:#d4af37;
+position:relative;
+
+background:linear-gradient(
+90deg,
+#d4af37 0%,
+#fff6b0 40%,
+#d4af37 80%
+);
+
+background-size:200%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+animation:shineText 8s infinite;
+}*/
+
+/*@keyframes shineText{
+
+0%{
+background-position:-200%;
+}
+
+50%{
+background-position:200%;
+}
+
+100%{
+background-position:200%;
+}
+
+}*/
+
+/*.hero h1{
+animation:glowText 3s infinite;
+font-family:'Playfair Display',serif;
+font-size:70px;
+margin:20px 0;
+color:#d4af37;
+position:relative;
+}*/
+
+/*@keyframes glowText{
+
+0%{
+text-shadow:none;
+}
+
+30%{
+text-shadow:
+0 0 10px #1b1605,
+0 0 20px #574407,
+0 0 40px #d4af37;
+}
+
+100%{
+text-shadow:none;
+}
+
+}*/
+
+.hero h1{
+animation:goldGlow 4s infinite;
+font-family:'Playfair Display',serif;
+font-size:70px;
+margin:20px 0;
+color:#d4af37;
+position:relative;
+}
+
+@keyframes goldGlow{
+
+0%,100%{
+text-shadow:0 0 0px #d4af37;
+}
+
+50%{
+text-shadow:
+0 0 10px #d4af37,
+0 0 25px #d4af37,
+0 0 50px rgba(212,175,55,0.7);
+}
+
+}
+.hero p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+.hero span {
+  color: #d4af37;
+  /*font-style: italic;*/
+}
+
+.btn {
+  border: 1px solid #d4af37;
+  padding: 10px 20px;
+  color: #d4af37;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #d4af37;
+  color: black;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(243, 241, 241, 0.4);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  animation: fadeUp 1.5s ease forwards;
+}
+
+.hero small {
+  color: #d4af37;
+  letter-spacing: 3px;
+}
+
+/*.hero span{color:#d4af37;font-style:italic}*/
+
+.hero p {
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.hero-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #d4af37 40%,
+    #fff3b0 50%,
+    #d4af37 60%,
+    transparent 100%
+  );
+
+  background-size: 200% 100%;
+
+  animation: goldLine 3s linear infinite;
+
+  box-shadow:
+    0 0 8px rgba(212, 175, 55, 0.8),
+    0 0 16px rgba(212, 175, 55, 0.4);
+}
+@keyframes goldLine {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* SECTIONS */
+
+/*section{
+padding:90px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:36px;
+color:#d4af37;
+margin-bottom:50px;
+}*/
+/* SECTIONS */
+
+section {
+  padding: 120px 8%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 80px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s;
+}
+
+.section-title.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-title small {
+  color: #d4af37;
+  letter-spacing: 3px;
+}
+
+.section-title h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 35px;
+  margin-top: 20px;
+}
+/* SERVICES */
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.card {
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  padding: 40px;
+  position: relative;
+  transition: 0.4s;
+}
+
+.card h3 {
+  color: #d4af37;
+  text-align: center;
+}
+.card:hover {
+  border-color: #d4af37;
+  transform: translateY(-10px);
+}
+
+.number {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 60px;
+  color: rgba(212, 175, 55, 0.08);
+}
+
+/* iconos tarjeta */
+.icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 50%;
+
+  font-size: 24px;
+  color: #d4af37;
+
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.card:hover .icon {
+  background: #d4af37;
+  color: black;
+  transform: scale(1.1);
+}
 
 
+/*RESPONSIVE*/
 @media (max-width: 900px) {
   .footer-container {
     grid-template-columns: 1fr 1fr;
