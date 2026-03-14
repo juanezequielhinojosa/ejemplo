@@ -204,6 +204,14 @@ text-shadow:
   color: #d4af37;
   cursor: pointer;
   transition: 0.3s;
+
+  text-decoration: none;
+  display: inline-block;
+
+    
+  display: block;
+  width: fit-content;
+  margin: auto;
 }
 
 .btn:hover {
