@@ -16,7 +16,9 @@ body {
 html {
   scroll-behavior: smooth;
 }
-html, body {
+
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -24,27 +26,27 @@ html, body {
 
 .reveal-left,
 .reveal-right,
-.reveal-zoom{
-opacity:0;
-transition:all 1s ease;
+.reveal-zoom {
+  opacity: 0;
+  transition: all 1s ease;
 }
 
 /* izquierda */
 
-.reveal-left{
-transform:translateX(-80px);
+.reveal-left {
+  transform: translateX(-80px);
 }
 
 /* derecha */
 
-.reveal-right{
-transform:translateX(80px);
+.reveal-right {
+  transform: translateX(80px);
 }
 
 /* zoom */
 
-.reveal-zoom{
-transform:scale(0.8);
+.reveal-zoom {
+  transform: scale(0.8);
 }
 
 /* cuando aparecen */
@@ -56,9 +58,9 @@ transform:translateX(0) scale(1);
 
 .reveal-left.active,
 .reveal-right.active,
-.reveal-zoom.active{
-opacity:1;
-transform:translateX(0) scale(1);
+.reveal-zoom.active {
+  opacity: 1;
+  transform: translateX(0) scale(1);
 }
 
 /* NAVBAR */
@@ -178,36 +180,33 @@ background-position:200%;
 
 }*/
 
-.hero h1{
-animation:glowText 3s infinite;
-font-family:'Playfair Display',serif;
-font-size:70px;
-margin:20px 0;
-color:#d4af37;
-position:relative;
+.hero h1 {
+  animation: glowText 3s infinite;
+  font-family: "Playfair Display", serif;
+  font-size: 70px;
+  margin: 20px 0;
+  color: #d4af37;
+  position: relative;
 }
 
-@keyframes glowText{
+@keyframes glowText {
+  0% {
+    text-shadow: none;
+  }
 
-0%{
-text-shadow:none;
-}
-
-50%{
-text-shadow:
+  50% {
+    text-shadow:
 /*0 0 10px #d4af37,
 0 0 20px #d4af37,
 0 0 40px #d4af37;*/
+      0 0 10px #1b1605,
+      0 0 20px #574407,
+      0 0 40px #d4af37;
+  }
 
-0 0 10px #1b1605,
-0 0 20px #574407,
-0 0 40px #d4af37;
-}
-
-100%{
-text-shadow:none;
-}
-
+  100% {
+    text-shadow: none;
+  }
 }
 
 /*.hero h1{
@@ -243,10 +242,9 @@ text-shadow:
 }
 
 .btn {
-
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
   border: 1px solid #d4af37;
   padding: 10px 20px;
@@ -341,7 +339,6 @@ margin-bottom:50px;
 
 section {
   padding: 80px 8%;
-  
 }
 
 .section-title {
@@ -352,8 +349,8 @@ section {
   transition: 1s;
 }
 
-.section-title .btn{
-margin-top:30px;
+.section-title .btn {
+  margin-top: 30px;
 }
 
 .section-title.active {

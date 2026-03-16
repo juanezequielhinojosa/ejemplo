@@ -25,6 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/maquinilla-de-afeitar.png" type="image/png">
 </head>
 
 <body>
@@ -154,7 +155,7 @@
             </div>
 
         </div>
-        
+
     </section>
 
 
@@ -319,7 +320,7 @@
                 <h2>Contáctanos y agenda tu próximo estilo !!!</h2>
                 <a href="#sucursales" class="btn">VER SUCURSALES</a>
             </div>
-            
+
         </div>
 
     </section>
@@ -779,22 +780,22 @@
         reveal();*/
 
 
-        
-function reveal() {
-  const elements = document.querySelectorAll(".reveal-left, .reveal-right, .reveal-zoom");
 
-  elements.forEach(el => {
-    const windowHeight = window.innerHeight;
-    const elementTop = el.getBoundingClientRect().top;
+        function reveal() {
+            const elements = document.querySelectorAll(".reveal-left, .reveal-right, .reveal-zoom");
 
-    if (elementTop < windowHeight - 150) {
-      el.classList.add("active");
-    }
-  });
-}
+            elements.forEach(el => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
 
-window.addEventListener("scroll", reveal);
-reveal(); // ← importante para que funcione al cargar
+                if (elementTop < windowHeight - 150) {
+                    el.classList.add("active");
+                }
+            });
+        }
+
+        window.addEventListener("scroll", reveal);
+        reveal(); // ← importante para que funcione al cargar
 
 
         /* COUNTER WHEN SCROLL */
